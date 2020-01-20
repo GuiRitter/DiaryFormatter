@@ -32,7 +32,7 @@ public class Main {
 
         JButton button = new JButton("format");
         frame.add(button, BorderLayout.PAGE_END);
-        button.addActionListener(event -> area.setText(area.getText().replaceAll("([0-9]{2})([0-9]{2})", "$1:$2")));
+        button.addActionListener(event -> area.setText(area.getText().replaceAll("([0-9]{2})([0-9]{2})", "$1:$2\\. ")));
 
         frame.setVisible(true);
         frame.pack();
