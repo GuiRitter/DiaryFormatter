@@ -28,7 +28,8 @@ public class Main {
 
         JTextArea area = new JTextArea();
         pane.setViewportView(area);
-        area.setRows(8);
+        area.setRows(10);
+        area.setColumns(25);
 
         JButton button = new JButton("format");
         frame.add(button, BorderLayout.PAGE_END);
