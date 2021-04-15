@@ -1,0 +1,25 @@
+#root {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	grid-template-rows: 1fr;
+}
+
+.input {
+	grid-area: 1 / 1 / 2 / 2;
+	margin: 1em 0.5em 0.5em 1em;
+}
+
+.output {
+	grid-area: 1 / 2 / 2 / 3;
+	margin: 1em 1em 0.5em 0.5em;
+}
+
+textarea {
+	resize: none;
+}
+
+.button {
+	grid-area: 2 / 1 / 3 / 3;
+	margin: 0.5em 1em 1em 1em;
+}
