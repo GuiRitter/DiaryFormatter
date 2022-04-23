@@ -2,6 +2,7 @@
   "name": "hour_minute_formatter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "hour_minute_formatter/",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
