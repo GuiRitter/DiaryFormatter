@@ -26,7 +26,7 @@ textarea {
 
 .button.initialize {
 	grid-area: 2 / 2 / 3 / 4;/* row-start / column-start / row-end / column-end */
-	margin: 0.5em 1em 1em 0.5em;/* top | right | bottom | left */
+	margin: 0.5em 0.5em 1em 0.5em;/* top | right | bottom | left */
 }
 
 .button.gym {
