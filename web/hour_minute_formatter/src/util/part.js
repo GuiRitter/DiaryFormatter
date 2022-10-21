@@ -82,4 +82,4 @@ export const treatMultipleSeries = line => treat(/[0-9]{1} \\x [0-9]+/gi, match 
 
 export const treatSingleSeries = line => treat(/[0-9+]+/gi, match => `$${match}$`, line, false, false);
 
-export const treatWeight = line => treat(/[0-9+]+/gi, match => `\si{${match}}{kg}`, line, false, true);
+export const treatWeight = line => treat(/[0-9+]+/gi, match => `\\si{${match}}{kg}`, line, false, true);
