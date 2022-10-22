@@ -55,7 +55,8 @@ function App(props) {
 			.map(treatMultipleMixedSeries)
 			.map(treatMultipleSeries)
 			.map(treatSingleSeries)
-			.map(line => line.map(getData).join(''));
+			.map(line => line.map(getData).join(''))
+			.map(line => `\t\\item ${line}`);
 		// output.value = JSON.stringify(lineList);
 		output.value = lineList.join('\n');
 	}} type='button' value='workout' /></>;
