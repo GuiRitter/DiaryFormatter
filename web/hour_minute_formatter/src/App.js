@@ -24,7 +24,9 @@ function App(props) {
 	return <><textarea className='input' id='input' /><textarea className='output' id='output' /><input className='button event-times' onClick={() => {
 		let input = document.getElementById("input");
 		let output = document.getElementById("output");
-		output.value = input.value.replace(/^([0-9]{2})([0-9]{2})/gim, '$1:$2. ');
+		output.value = input.value
+			.replace(/^([0-9]{2})([0-9]{2})/gim, '$1:$2. ')
+			.replace(/^Estou aqui: (.+)°[ELNOSW] (.+)°[ELNOSW].*/gim, '\\gpsSO{$1}{$2}');
 	}} type='button' value='event times' /><input className='button initialize' onClick={() => {
 		const input = document.getElementById("input");
 		const output = document.getElementById("output");
