@@ -4,6 +4,8 @@ import { getData, treatColon, treatMinuteSecond, treatMultipleMixedSeries, treat
 
 import './App.css';
 
+const moment = require('moment');
+
 function componentDidMount(props) {
 	document.body.classList.add('container');
 }
@@ -36,9 +38,18 @@ function App(props) {
 		const month = array[1];
 		let builder = '';
 		(new Array(31)).fill().forEach((value, index) => {
-			builder += `\\begin{center}\n\n${year}-${month}-${
-				
-				new Intl.NumberFormat('en-US', { minimumIntegerDigits: 2 }).format(index + 1)
+			const day = index + 1;
+
+			let yearMonthDay = moment();
+
+			yearMonthDay.year(year);
+			yearMonthDay.month(month - 1);
+			yearMonthDay.date(day);
+
+			builder += `\\begin{center}% ${
+				yearMonthDay.format('dddd')
+			}\n\n${year}-${month}-${
+				new Intl.NumberFormat('en-US', { minimumIntegerDigits: 2 }).format(day)
 			}\n\n\\end{center}\n\n\n\n`
 		});
 		output.value = builder;
