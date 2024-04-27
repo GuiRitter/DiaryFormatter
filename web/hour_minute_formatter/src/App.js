@@ -31,7 +31,9 @@ function App(props) {
 			.replace(/^(.+)([^ \n]{1})$/gim, '$1$2 ')
 			.replace(/^Estou aqui: (.+)°[ELNOSW] (.+)°[ELNOSW].*/gim, '\\gpsSO{$1}{$2}')
 			.replace(/^(.+) \n\n{1}/gim, '$1\n\n')
-			.replace(/[(] $/gim, '(');
+			.replace(/[(] $/gim, '(')
+			.replace(/(.+) $/gi, '$1')
+			.replace(/(.+) \n$/gi, '$1\n');
 	}} type='button' value='event times' /><input className='button initialize' onClick={() => {
 		const input = document.getElementById("input");
 		const output = document.getElementById("output");
