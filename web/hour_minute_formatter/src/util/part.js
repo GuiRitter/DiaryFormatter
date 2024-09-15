@@ -74,12 +74,12 @@ export const treatColon = line => treat(/[:]/gi, match => match, line, true, fal
 
 export const treatMinuteSecond = line => treat(/[0-9]{4}/gi, match => `${match.slice(0, 2)}:${match.slice(2)}`, line, false, false);
 
-export const treatMultipleMixedSeries = line => treat(/[0-9]{1} \\p{[0-9+]+}/gi, match => `$${match}$`, line, false, false);
+export const treatMultipleMixedSeries = line => treat(/[0-9]{1} \\p{[0-9½+]+}/gi, match => `$${match}$`, line, false, false);
 
 export const treatPeriod = line => treat(/[.]/gi, match => match, line, false, false);
 
-export const treatMultipleSeries = line => treat(/[0-9]{1} \\x [0-9]+/gi, match => `$${match}$`, line, false, false);
+export const treatMultipleSeries = line => treat(/[0-9]{1} \\x [0-9½]+/gi, match => `$${match}$`, line, false, false);
 
-export const treatSingleSeries = line => treat(/[0-9+]+/gi, match => `$${match}$`, line, false, false);
+export const treatSingleSeries = line => treat(/[0-9½+]+/gi, match => `$${match}$`, line, false, false);
 
 export const treatWeight = line => treat(/[0-9+]+/gi, match => `\\si{${match}}{kg}`, line, false, true);
