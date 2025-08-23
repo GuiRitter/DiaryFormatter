@@ -29,7 +29,7 @@ function App(props) {
 		output.value = input.value
 			.replace(/^([0-9]{2})([0-9]{2})/gim, '$1:$2. ')
 			.replace(/^(.+)([^ \n]{1})$/gim, '$1$2 ')
-			.replace(/^(\d{2}:\d{2}. )Estou aqui: (.*)/gim, '$1\nEstou aqui: $2')
+			.replace(/^(\d{2}:\d{2}. )Estou aqui: (.*)/gim, 'Estou aqui: $2\n$1')
 			.replace(/^Estou aqui: (.+)°[ELNOSW] (.+)°[ELNOSW].*/gim, '\\gpsSO{$1}{$2}')
 			.replace(/^(.+) \n\n{1}/gim, '$1\n\n')
 			.replace(/[(] $/gim, '(')
